@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+} */
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ff5e7eff;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.btn:hover {
+  border-color: #646cff;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.form-raw-1{
+  position: relative;
+}
+
+.form-raw-2{
+  position: relative;
+}
+.form-raw-3{
+  position: relative;
+}
+.form-label{
+  position:absolute;
+  left: 10px;
+  top: -10px;
+  font-size: small;
+  background-color: #fff;
+  padding: 0px 6px;
+}
+.form-input{
+  width: 100%;
+  padding: 1rem;
+  border-radius: .5rem;
+  border: 1px solid black;
+  background-color: #fff; 
+  color: #000; 
+  outline: none;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  .btn {
+    background-color: #f9f9f9;
+  }
+}
