@@ -19,16 +19,17 @@ const app = express();
 
 const port = process.env.PORT || 4000;
 
-// middlewares
+// middlewares]
+connectDB();
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://my-project-three-black-92.vercel.app/"],
+        origin:["https://my-project-three-black-92.vercel.app/"],
         method:["POST","GET","DELETE","PUT"],
         credentials: true
     }
 ));
-connectDB();
+
 
 //API routes
 app.use("auth",authRoutes);
@@ -36,7 +37,7 @@ app.use("users",userRoutes);
 app.use("recipes",recipes);
 
 app.get('/',(req,res)=> {
-    res.status(200).send("Welcome to recipe app");
+    res.status(200).json("Welcome to recipe app");
 })
 
 
