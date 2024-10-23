@@ -23,7 +23,7 @@ const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cors(
     {
-        origin: [],
+        origin: ["https://recipe-app-3ztsep5tj-banukadss-projects.vercel.app"],
         method:["POST","GET","DELETE"],
         credentials: true
     }
