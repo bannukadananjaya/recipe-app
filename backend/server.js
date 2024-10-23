@@ -37,7 +37,7 @@ app.use("users",userRoutes);
 app.use("recipes",recipes);
 
 app.get('/',(req,res)=> {
-    res.status(200).json("Welcome to recipe app");
+    res.json("Welcome to recipe app");
 })
 
 
@@ -48,6 +48,5 @@ app.listen(port,()=>{
         console.log("Error occured",err);
     }
 })
-
 
 export default app;
