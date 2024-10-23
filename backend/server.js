@@ -33,10 +33,14 @@ app.get('/',(req,res)=> {
     res.status(200).send("Welcome to recipe app");
 })
 
-app.listen(port,()=>{
-    try{
-        console.log("Server is running");
-    }catch(err){
-        console.log("Error occured",err);
-    }
-})
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port,()=>{
+        try{
+            console.log("Server is running");
+        }catch(err){
+            console.log("Error occured",err);
+        }
+    })
+}
+
+export default app;
