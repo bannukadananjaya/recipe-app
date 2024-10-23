@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cors(
     {
         origin: ["https://recipe-app-api-iota.vercel.app/"],
-        method:["POST","GET","DELETE","PUT"],
+        methods:["POST","GET","DELETE","PUT"],
         credentials: true
     }
 ));
