@@ -5,17 +5,17 @@ import authRoutes from './routes/auth.js';
 import userRoutes from './routes/users.js';
 import recipes from './routes/recipes.js';
 import dotenv from 'dotenv';
-const path = require('path');
+// import  path  from 'path';
 
 dotenv.config();
 const app = express();
 
 // Serve static files from the dist folder
-app.use(express.static(path.join(__dirname, 'dist')));
+// app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+// });
 
 const port = process.env.PORT || 4000;
 
