@@ -15,6 +15,7 @@ api.interceptors.request.use((config) => {
     return config;
 },(err)=>{
     return Promise.reject(err);
+    
 }
 );
 
