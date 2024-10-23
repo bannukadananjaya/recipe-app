@@ -24,29 +24,29 @@ app.use(express.json());
 app.use(cors(
     {
         origin: ["https://my-project-three-black-92.vercel.app/"],
-        method:["POST","GET","DELETE"],
+        method:["POST","GET","DELETE","PUT"],
         credentials: true
     }
 ));
 connectDB();
 
 //API routes
-app.use("/api/auth",authRoutes);
-app.use("/api/users",userRoutes);
-app.use("/api/recipes",recipes);
+app.use("auth",authRoutes);
+app.use("users",userRoutes);
+app.use("recipes",recipes);
 
 app.get('/',(req,res)=> {
     res.status(200).send("Welcome to recipe app");
 })
 
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(port,()=>{
-        try{
-            console.log("Server is running");
-        }catch(err){
-            console.log("Error occured",err);
-        }
-    })
-}
+
+app.listen(port,()=>{
+    try{
+        console.log("Server is running");
+    }catch(err){
+        console.log("Error occured",err);
+    }
+})
+
 
 export default app;

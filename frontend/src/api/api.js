@@ -1,8 +1,9 @@
 import axios from "axios";
 import { getToken } from "./Auth";
 const apiUrl = import.meta.env.VITE_API_URL;
+
 const api = axios.create({
-    baseURL:`${apiUrl}/api/auth/login`
+    baseURL:`${apiUrl}`
 })
 
 api.interceptors.request.use((config) => {
