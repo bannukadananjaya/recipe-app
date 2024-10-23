@@ -24,8 +24,8 @@ connectDB();
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://my-project-three-black-92.vercel.app/"],
-        method:["POST","GET","DELETE"],
+        origin: ["https://recipe-app-api-iota.vercel.app/"],
+        method:["POST","GET","DELETE","PUT"],
         credentials: true
     }
 ));
