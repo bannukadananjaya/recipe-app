@@ -3,7 +3,7 @@ import { getToken } from "./Auth";
 
 const api = axios.create({
     // baseURL:'http://localhost:3000'
-     baseURL:'184.72.198.7'
+     baseURL:'http://184.72.198.7'
 })
 // baseURL:`${apiUrl}
 
