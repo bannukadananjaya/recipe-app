@@ -39,7 +39,7 @@ const Header = () => {
         </ul>
         <span 
             className={`fa-solid ${isLoggedIn ? 'fa-arrow-right-from-bracket' : 'fa-arrow-right-to-bracket'} text-2xl cursor-pointer hover:text-red-500`} 
-            onClick={isLoggedIn ? {handleLogout} : {handleLogIn} }
+            onClick={isLoggedIn ? handleLogout : handleLogIn }
         ></span>
     </div>
   )
