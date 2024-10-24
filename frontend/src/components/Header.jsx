@@ -1,18 +1,23 @@
 import { useContext } from "react";
 import { RecipeContext } from "../context/RecipeContext";
-import { Link,useLocation } from "react-router-dom"
+import { Link,useNavigate } from "react-router-dom"
 import { logout } from "../api/userApi";
 import logo from '../assets/logo.png'
 
 const Header = () => {
   const {isLoggedIn} = useContext(RecipeContext);
   console.log("log",isLoggedIn);
-  const location = useLocation(); 
+  const navigate = useNavigate(); 
+
+  const handleLogIn = () => {
+    navigate('/sign-in');  
+
+  }
 
   const handleLogout = () => {
     logout();
     localStorage.clear();
-    window.location.href = '/';  
+    navigate('/');  
 
   }
   const isHomePage = ["/", "/recipe/pork", "/recipe/beef", "/recipe/chicken", "/recipe/lamb", "/recipe/pasta"].includes(location.pathname);
@@ -34,7 +39,7 @@ const Header = () => {
         </ul>
         <i 
             className={`fa-solid ${isLoggedIn ? 'fa-arrow-right-from-bracket' : 'fa-arrow-right-to-bracket'} text-2xl cursor-pointer hover:text-red-500`} 
-            onClick={isLoggedIn ? handleLogout : () => window.location.href = '/sign-in'}
+            onClick={isLoggedIn ? handleLogout : handleLogIn }
         ></i>
     </div>
   )

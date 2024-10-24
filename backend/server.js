@@ -30,7 +30,7 @@ app.use(express.json());
 //     }
 // ));
 app.use(cors({
-    origin: 'https://recipe-app-two-tau.vercel.app',  // Replace with your Vercel domain
+    origin: ['https://recipe-app-client-rho.vercel.app',"http://localhost:3000"] , // Replace with your Vercel domain
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization'
   }));
