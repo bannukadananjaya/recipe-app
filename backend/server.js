@@ -24,7 +24,7 @@ connectDB();
 app.use(express.json());
 app.use(cors(
     {
-        origin: ["https://recipe-app-api-iota.vercel.app/"],
+        origin: ["https://recipe-app-api-iota.vercel.app/","http://localhost:3000"],
         methods:["POST","GET","DELETE","PUT"],
         credentials: true
     }
@@ -32,9 +32,9 @@ app.use(cors(
 
 
 //API routes
-app.use("auth",authRoutes);
-app.use("users",userRoutes);
-app.use("recipes",recipes);
+app.use("/auth",authRoutes);
+app.use("/users",userRoutes);
+app.use("/recipes",recipes);
 
 app.get('/',(req,res)=> {
     res.json("Welcome to recipe app");

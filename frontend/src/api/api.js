@@ -1,10 +1,10 @@
 import axios from "axios";
 import { getToken } from "./Auth";
-const apiUrl = import.meta.env.VITE_API_URL;
 
 const api = axios.create({
-    baseURL:`${apiUrl}`
+    baseURL:'http://localhost:3000'
 })
+// baseURL:`${apiUrl}
 
 api.interceptors.request.use((config) => {
     const token = getToken();
