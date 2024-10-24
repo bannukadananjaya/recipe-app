@@ -44,17 +44,6 @@ export const register = async (data) => {
     }
 };
 
-export const logout = async()=> {
-    try{
-        const response = await api.post('/user/logout');
-        localStorage.removeItem('token');
-        return response.data;
-    }catch(err){
-        console.log(err);
-    }
-}
-
-
 export const addFavourite = async (meal) => {
     try{
         // const userId = localStorage.getItem('userId');
