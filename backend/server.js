@@ -22,14 +22,18 @@ const port = process.env.PORT || 4000;
 // middlewares]
 connectDB();
 app.use(express.json());
-app.use(cors(
-    {
-        origin: ["https://recipe-app-api-iota.vercel.app/","http://localhost:3000"],
-        methods:["POST","GET","DELETE","PUT"],
-        credentials: true
-    }
-));
-
+// app.use(cors(
+//     {
+//         origin: ["https://recipe-app-api-iota.vercel.app/","http://localhost:3000"],
+//         methods:["POST","GET","DELETE","PUT"],
+//         credentials: true
+//     }
+// ));
+app.use(cors({
+    origin: 'https://recipe-app-two-tau.vercel.app',  // Replace with your Vercel domain
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
+  }));
 
 //API routes
 app.use("/auth",authRoutes);
