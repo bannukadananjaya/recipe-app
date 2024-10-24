@@ -5,7 +5,7 @@ import { logout } from "../api/userApi";
 import logo from '../assets/logo.png'
 
 const Header = () => {
-  const {isLoggedIn} = useContext(RecipeContext);
+  const {isLoggedIn,setIsLoggedIn} = useContext(RecipeContext);
   console.log("log",isLoggedIn);
   const navigate = useNavigate(); 
 
@@ -15,8 +15,9 @@ const Header = () => {
   }
 
   const handleLogout = () => {
-    logout();
+    localStorage.removeItem('token');
     localStorage.clear();
+    setIsLoggedIn(false);
     navigate('/');  
 
   }

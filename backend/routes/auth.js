@@ -5,30 +5,6 @@ import jwt from 'jsonwebtoken';
 
 const router = express.Router();
 
-// router.post("/register", async (req,res) => {
-//     try{
-//         //Salting and Hashing the password
-//         const salt = await bcrypt.genSalt(10);
-//         const hashPassword = await bcrypt.hash(req.body.password, salt);
-//         console.log(req.body);
-//         //create a new user
-//         const newuser = await new User({
-//             firstName:req.body.firstName,
-//             lastName:req.body.lastName,
-//             email:req.body.email,
-//             phoneNumber:req.body.phoneNumber,
-//             password:hashPassword,
-//         })
-
-//         const user =await newuser.save();
-
-//         res.status(200).json(user);
-
-//     }catch(err){
-//         console.log(err.message);
-//     }
-// })
-
 router.post("/register", async (req, res) => {
     try {
         // Check if user already exists by email
