@@ -12,8 +12,6 @@ function App() {
           <Route path="/" element={<Home category="Pork"/>}/>
           <Route path="/favourites" element={<Favourites/>}/>
           <Route path="/sign-in" element={<Login/>}/>
-          {/* <Route path="/sign-up" element={<Signup/>}/> */}
-
           <Route path="/recipe/pork" element={<Home category="Pork"/>}/>
           <Route path="/recipe/beef" element={<Home category="Beef"/>}/>
           <Route path="/recipe/chicken" element={<Home category="Chicken"/>}/>

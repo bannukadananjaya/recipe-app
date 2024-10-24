@@ -7,15 +7,15 @@ import logo from '../assets/logo.png'
 const Header = () => {
   const {isLoggedIn} = useContext(RecipeContext);
   console.log("log",isLoggedIn);
-    const location = useLocation(); 
+  const location = useLocation(); 
 
-    const handleLogout = () => {
-      logout();
-      localStorage.clear();
-      window.location.href = '/';  
+  const handleLogout = () => {
+    logout();
+    localStorage.clear();
+    window.location.href = '/';  
 
-    }
-    const isHomePage = ["/", "/recipe/pork", "/recipe/beef", "/recipe/chicken", "/recipe/lamb", "/recipe/pasta"].includes(location.pathname);
+  }
+  const isHomePage = ["/", "/recipe/pork", "/recipe/beef", "/recipe/chicken", "/recipe/lamb", "/recipe/pasta"].includes(location.pathname);
 
   return (
     <div className="w-[100%] mt-4 flex justify-around items-center bg-white">
