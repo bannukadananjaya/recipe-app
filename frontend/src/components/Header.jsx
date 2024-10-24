@@ -37,10 +37,10 @@ const Header = () => {
             <Link to="/favourites">  {location.pathname === "/favourites" ? <b>Favourite</b> : "Favourite"}</Link>
           </li>
         </ul>
-        <i 
+        <span 
             className={`fa-solid ${isLoggedIn ? 'fa-arrow-right-from-bracket' : 'fa-arrow-right-to-bracket'} text-2xl cursor-pointer hover:text-red-500`} 
-            onClick={isLoggedIn ? handleLogout : handleLogIn }
-        ></i>
+            onClick={isLoggedIn ? {handleLogout} : {handleLogIn} }
+        ></span>
     </div>
   )
 }
